@@ -1,0 +1,26 @@
+#homeLogo{
+    margin-left: -5%;
+}
+/* Nav.Link Adjustment */
+#home{
+    margin-left: 95%;
+}
+/* Nav.Link  */
+.NavLinks{
+    /* color: white; */
+}
+.NavLinks:hover{
+    color: white;
+    text-decoration: underline;
+}
+/* togglebtn */
+#togglebtn{
+    margin-right: -70px;
+    margin-top: -5px;
+    margin-left: auto;
+}
+
+/* loginbtn */
+#loginbtn{
+    margin-left: 55%;
+}
