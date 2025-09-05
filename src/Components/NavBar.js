@@ -3,6 +3,7 @@ import "./CSS/NavBar.css";
 import { Navbar, Nav, Container, Button } from "react-bootstrap";
 import { useTheme } from "../Components/ThemeContext";
 import { FaMoon, FaSun, FaUser } from "react-icons/fa";
+import { Link } from "react-router-dom";   // 👈 yeh add karo
 
 const NavBar = () => {
   const { theme, toggleTheme } = useTheme();
@@ -15,28 +16,35 @@ const NavBar = () => {
       className="shadow-sm"
     >
       <Container>
-        <Navbar.Brand id="homeLogo" href="/" className="fw-bold">
+        {/* 👇 href ki jagah as={Link} to="/" */}
+        <Navbar.Brand id="homeLogo" as={Link} to="/" className="fw-bold">
           My Website
         </Navbar.Brand>
+
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link className="NavLinks" id="home" href="/">Home</Nav.Link>
-            <Nav.Link className="NavLinks" href="/about">About</Nav.Link>
-            <Nav.Link className="NavLinks" href="/skills">Skills</Nav.Link>
-            <Nav.Link className="NavLinks" href="/projects">Projects</Nav.Link>
-            <Nav.Link className="NavLinks" href="/contact">Contact</Nav.Link>
+            <Nav.Link as={Link} to="/" className="NavLinks" id="home">Home</Nav.Link>
+            <Nav.Link as={Link} to="/about" className="NavLinks">About</Nav.Link>
+            <Nav.Link as={Link} to="/skills" className="NavLinks">Skills</Nav.Link>
+            <Nav.Link as={Link} to="/projects" className="NavLinks">Projects</Nav.Link>
+            <Nav.Link as={Link} to="/contact" className="NavLinks">Contact</Nav.Link>
           </Nav>
 
-          <Button id="loginbtn" variant={theme === "light" ? "outline-dark" : "outline-light"}
-              className="d-flex align-items-center gap-2"
-              href="/login" >
-                 <FaUser /> Register
-            </Button>
-
+          {/* 👇 href ki jagah as={Link} to="/login" */}
+          <Button
+            id="loginbtn"
+            as={Link}
+            to="/login"
+            variant={theme === "light" ? "outline-dark" : "outline-light"}
+            className="d-flex align-items-center gap-2"
+          >
+            <FaUser /> Register
+          </Button>
 
           {/* 👇 Icon button */}
-          <div id="togglebtn"
+          <div
+            id="togglebtn"
             onClick={toggleTheme}
             style={{
               cursor: "pointer",

@@ -1,26 +1,63 @@
-#homeLogo{
-    margin-left: -5%;
+#homeLogo {
+  margin-left: -5%;
 }
+
 /* Nav.Link Adjustment */
-#home{
-    margin-left: 95%;
+#home {
+  margin-left: 95%;
 }
+
 /* Nav.Link  */
-.NavLinks{
-    /* color: white; */
+.NavLinks {
+  transition: color 0.3s;
 }
-.NavLinks:hover{
-    color: white;
-    text-decoration: underline;
+
+.footer.light .NavLinks,
+.NavLinks {
+  color: inherit;
 }
+
+.NavLinks:hover {
+  text-decoration: underline;
+}
+
+/* Light theme hover */
+.navbar-light .NavLinks:hover {
+  color: #6c63ff !important;
+}
+
+/* Dark theme hover */
+.navbar-dark .NavLinks:hover {
+  color: #ff4b5c !important;
+}
+
 /* togglebtn */
-#togglebtn{
-    margin-right: -70px;
-    margin-top: -5px;
-    margin-left: auto;
+#togglebtn {
+  margin-right: -70px;
+  margin-top: -5px;
+  margin-left: auto;
 }
 
 /* loginbtn */
-#loginbtn{
-    margin-left: 55%;
+#loginbtn {
+  margin-left: 55%;
+  transition: all 0.3s;
+}
+
+/* Light theme login hover */
+.navbar-light #loginbtn:hover {
+  background: #6c63ff;
+  color: #fff;
+}
+
+/* Dark theme login hover */
+.navbar-dark #loginbtn:hover {
+  background: #ff4b5c;
+  color: #fff;
+}
+
+/* Transparent Navbar */
+.navbar {
+  background: transparent !important;
+  transition: background 0.3s ease;
 }
