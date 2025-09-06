@@ -39,7 +39,7 @@ const NavBar = () => {
             variant={theme === "light" ? "outline-dark" : "outline-light"}
             className="d-flex align-items-center gap-2"
           >
-            <FaUser /> Register
+            <FaUser /> Login
           </Button>
 
           {/* 👇 Icon button */}

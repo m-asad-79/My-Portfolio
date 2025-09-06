@@ -84,17 +84,17 @@ const AboutSection = () => {
         <div className="fun-facts">
           <div className="fact">
             <FaUserFriends className="fact-icon" />
-            <h3>20+</h3>
+            <h3>50+</h3>
             <p>Happy Clients</p>
           </div>
           <div className="fact">
             <FaProjectDiagram className="fact-icon" />
-            <h3>50+</h3>
+            <h3>100+</h3>
             <p>Projects Completed</p>
           </div>
           <div className="fact">
             <FaClock className="fact-icon" />
-            <h3>2+</h3>
+            <h3>1+</h3>
             <p>Years Experience</p>
           </div>
         </div>

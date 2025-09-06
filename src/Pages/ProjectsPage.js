@@ -1,8 +1,11 @@
 import React from 'react'
+import ProjectsSection from '../Components/ProjectsSection'
 
 const ProjectPage = () => {
   return (
-    <div>ProjectPage</div>
+    <div>
+      <ProjectsSection />
+    </div>
   )
 }
 

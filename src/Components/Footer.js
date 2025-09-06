@@ -2,6 +2,7 @@ import React from "react";
 import { useTheme } from "../Components/ThemeContext";
 import { FaLinkedin, FaGithub, FaFacebookF, FaInstagram } from "react-icons/fa";
 import "./CSS/Footer.css";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const { theme } = useTheme();
@@ -18,10 +19,11 @@ const Footer = () => {
 
         {/* Middle: Quick Links */}
         <div className="footer-links">
-          <a href="/">Home</a>
-          <a href="/about">About</a>
-          <a href="/projects">Projects</a>
-          <a href="/contact">Contact</a>
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+          <Link to="/skills">Skills</Link>
+          <Link to="/projects">Projects</Link>
+          <Link to="/contact">Contact</Link>
         </div>
 
         {/* Right: Social Icons */}
