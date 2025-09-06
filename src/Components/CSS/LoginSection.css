@@ -115,3 +115,39 @@
 .login-footer a:hover {
   text-decoration: underline;
 }
+
+/* Eye */
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 40px; /* 👈 space for eye */
+  box-sizing: border-box;
+}
+
+.eye-btn {
+  position: absolute;
+  right: 10px;
+  top: 6%;
+  background: transparent;
+  border: none;
+  padding: 0;          /* 👈 remove padding */
+  margin: 0;           /* 👈 remove margin */
+  line-height: 1;      /* 👈 stop vertical shift */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+
+.eye-btn svg {
+  pointer-events: none; /* 👈 avoid svg shifting */
+}
+
+.eye-btn:hover {
+  color: #000; /* simple hover effect */
+}

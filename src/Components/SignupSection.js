@@ -1,24 +1,29 @@
 import React, { useState } from "react";
 import { useTheme } from "../Components/ThemeContext";
-import { Link } from "react-router-dom"; // 👈 yeh import karo
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+import { Eye, EyeOff } from "lucide-react"; // 👈 icons
 import "./CSS/SignupSection.css";
 
 const SignupSection = () => {
   const { theme } = useTheme();
+  const navigate = useNavigate();
   const [form, setForm] = useState({
     name: "",
     email: "",
     password: "",
     confirmPassword: "",
   });
-
   const [error, setError] = useState("");
+  const [showPassword, setShowPassword] = useState(false); // 👈 toggle for password
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false); // 👈 toggle for confirm
 
+  // ✅ Update form state on input change
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (form.password !== form.confirmPassword) {
@@ -27,8 +32,25 @@ const SignupSection = () => {
     }
 
     setError("");
-    console.log("Form submitted ✅", form);
-    // yahan API call kar sakte ho backend ko bhejne ke liye
+
+    try {
+      const res = await axios.post("http://localhost:5000/api/users/signup", {
+        name: form.name,
+        email: form.email,
+        password: form.password,
+        confirmPassword: form.confirmPassword,
+      });
+
+      console.log("Signup Success ✅", res.data);
+      navigate("/login");
+    } catch (err) {
+      console.log(err);
+      if (err.response?.data?.message) {
+        setError(err.response.data.message);
+      } else {
+        setError("Signup failed: " + err.message);
+      }
+    }
   };
 
   return (
@@ -58,22 +80,44 @@ const SignupSection = () => {
             onChange={handleChange}
             required
           />
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            value={form.password}
-            onChange={handleChange}
-            required
-          />
-          <input
-            type="password"
-            name="confirmPassword"
-            placeholder="Confirm Password"
-            value={form.confirmPassword}
-            onChange={handleChange}
-            required
-          />
+
+          {/* 🔹 Password Input with Eye */}
+          <div className="password-wrapper">
+            <input
+              type={showPassword ? "text" : "password"}
+              name="password"
+              placeholder="Password"
+              value={form.password}
+              onChange={handleChange}
+              required
+            />
+            <button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              className="eye-btn"
+            >
+              {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+            </button>
+          </div>
+
+          {/* 🔹 Confirm Password Input with Eye */}
+          <div className="password-wrapper">
+            <input
+              type={showConfirmPassword ? "text" : "password"}
+              name="confirmPassword"
+              placeholder="Confirm Password"
+              value={form.confirmPassword}
+              onChange={handleChange}
+              required
+            />
+            <button
+              type="button"
+              onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+              className="eye-btn"
+            >
+              {showConfirmPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+            </button>
+          </div>
 
           {error && <p className="error-message">{error}</p>}
 
@@ -83,8 +127,7 @@ const SignupSection = () => {
         </form>
 
         <p className="login-redirect">
-          Already have an account?{" "}
-          <Link to="/login">Login</Link> {/* 👈 reload nahi hoga */}
+          Already have an account? <Link to="/login">Login</Link>
         </p>
       </div>
     </section>

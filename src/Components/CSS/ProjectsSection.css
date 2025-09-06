@@ -216,9 +216,6 @@
   margin-bottom: 0.5rem;
 }
 
-.stats-row + .bottom-line {
-  display: none;
-}
 
 .stat-box p {
   font-size: 0.95rem;

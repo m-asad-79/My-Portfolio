@@ -1,10 +1,36 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { useTheme } from "../Components/ThemeContext";
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
+import emailjs from "emailjs-com";
 import "./CSS/ContactSection.css";
 
 const ContactSection = () => {
   const { theme } = useTheme();
+  const formRef = useRef();
+  const [status, setStatus] = useState("");
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_a0rtxji",   // ← EmailJS se copy karo
+        "template_vekufsn",  // ← EmailJS se copy karo
+        formRef.current,
+        "SykivTWmGNUNPo2gM"    // ← EmailJS user/public key
+      )
+      .then(
+        (result) => {
+          console.log("Email sent ✅", result.text);
+          setStatus("Message sent successfully!");
+          formRef.current.reset();
+        },
+        (error) => {
+          console.log("Email error ❌", error.text);
+          setStatus("Failed to send message. Try again!");
+        }
+      );
+  };
 
   return (
     <section className={`contact-section ${theme}`}>
@@ -44,11 +70,12 @@ const ContactSection = () => {
         </div>
 
         {/* Right Side - Form */}
-        <form className="contact-form">
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
-          <textarea rows="5" placeholder="Your Message" required></textarea>
+        <form ref={formRef} onSubmit={sendEmail} className="contact-form">
+          <input type="text" name="user_name" placeholder="Your Name" required />
+          <input type="email" name="user_email" placeholder="Your Email" required />
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
           <button type="submit" className="btn-submit">Send Message</button>
+          {status && <p className="status-message">{status}</p>}
         </form>
       </div>
     </section>

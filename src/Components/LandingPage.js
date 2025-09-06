@@ -1,6 +1,7 @@
 import React from "react";
 import { useTheme } from "../Components/ThemeContext";
 import { Typewriter } from "react-simple-typewriter";
+import { Link } from "react-router-dom";
 import {
   FaLinkedin,
   FaGithub,
@@ -44,14 +45,14 @@ const LandingPage = () => {
         </p>
 
         {/* 👇 Buttons */}
-        <div className="buttons">
-          <a href="/contact" className="btn-main">
-            Hire Me
-          </a>
-          <a href="/contact" className="btn-outline">
-            Contact
-          </a>
-        </div>
+       <div className="buttons">
+  <Link to="/contact" className="btn-main">
+    Hire Me
+  </Link>
+  <Link to="/contact" className="btn-outline">
+    Contact
+  </Link>
+</div>
 
         {/* 👇 Social Icons */}
         <div className="social-icons">

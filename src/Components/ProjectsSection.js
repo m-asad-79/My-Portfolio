@@ -91,15 +91,15 @@ const ProjectsSection = () => {
       <div className="stats-row">
          
         <div className="stat-box">  
-          <h3>50+</h3>
+          <h3>100+</h3>
           <p>Projects Completed</p>
         </div>
         <div className="stat-box">
-          <h3>30+</h3>
+          <h3>50+</h3>
           <p>Happy Clients</p>
         </div>
         <div className="stat-box">
-          <h3>3+</h3>
+          <h3>1+</h3>
           <p>Years Experience</p>
         </div>
         <div className="stat-box">

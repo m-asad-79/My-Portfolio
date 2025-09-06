@@ -124,28 +124,48 @@
   border-radius: 10px;
 }
 
-/* Fun Facts */
-.fun-facts {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-
-.fact {
+/* Fun Facts / Achievements Boxes */
+.fun-facts .fact {
   flex: 1 1 200px;
   text-align: center;
-  padding: 20px;
+  padding: 25px;
+  border-radius: 18px;
+  background: inherit;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  position: relative;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease, background 0.4s ease;
+  cursor: pointer;
 }
 
-.fact-icon {
+/* Hover effect similar to ProjectsSection */
+.fun-facts .fact:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+/* Light Theme Hover Gradient */
+.about-page.light .fun-facts .fact:hover {
+  border-image: linear-gradient(90deg, #6c63ff, #857dff) 1;
+  background: rgba(108,99,255,0.05);
+}
+
+/* Dark Theme Hover Gradient */
+.about-page.dark .fun-facts .fact:hover {
+  border-image: linear-gradient(90deg, #ff4b5c, #ff6f80) 1;
+  background: rgba(255,75,92,0.08);
+}
+
+/* Icon + Text */
+.fun-facts .fact-icon {
   font-size: 2.5rem;
-  color: #6c63ff;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
 }
-
-.fact h3 {
-  font-size: 1.8rem;
-  font-weight: bold;
+.about-page.light .fact:hover .fact-icon {
+  color: #6c63ff;
+}
+.about-page.dark .fact:hover .fact-icon {
+  color: #ff4b5c;
 }

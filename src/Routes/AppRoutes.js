@@ -8,6 +8,7 @@ import ContactPage from "../Pages/ContactPage";
 import LoginSection from "../Components/LoginSection";
 import SignupSection from "../Components/SignupSection";
 
+
 const AppRoutes = () => {
   return (
     <Routes>
