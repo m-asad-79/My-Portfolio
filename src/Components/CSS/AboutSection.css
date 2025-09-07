@@ -169,3 +169,26 @@
 .about-page.dark .fact:hover .fact-icon {
   color: #ff4b5c;
 }
+
+/* Title + Subtitle same style as ProjectsSection */
+.section-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.about-page.light .section-title span {
+  color: #6c63ff;
+}
+.about-page.dark .section-title span {
+  color: #ff4b5c;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  opacity: 0.8;
+  margin-bottom: 3rem;
+}
+

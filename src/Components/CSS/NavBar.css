@@ -1,16 +1,57 @@
-#homeLogo {
-  margin-left: -5%;
-}
-
 /* Nav.Link Adjustment */
 #home {
-  margin-left: 95%;
+  margin-left: -10%;
 }
 
 /* Nav.Link  */
 .NavLinks {
   transition: color 0.3s;
+  margin-left: 10px;
 }
+
+/* Developer & Designer center text */
+.developer-text {
+  font-size: 1.2rem;   /* base size */
+  letter-spacing: 1px;
+  text-align: center;
+  color: white;
+}
+
+/* Nav.Link text size increased */
+.NavLinks {
+  transition: color 0.3s;
+  margin-left: 15px;
+  font-size: 1.1rem;   /* 👈 thoda bada text */
+  font-weight: 500;
+}
+
+.NavLinks:hover {
+  text-decoration: underline;
+}
+
+/* Light theme hover */
+.navbar-light .NavLinks:hover {
+  color: #6c63ff !important;
+}
+
+/* Dark theme hover */
+.navbar-dark .NavLinks:hover {
+  color: #ff4b5c !important;
+}
+
+/* togglebtn */
+#togglebtn {
+  margin-right: -70px;
+  margin-top: -5px;
+  margin-left: auto;
+}
+
+/* Transparent Navbar */
+.navbar {
+  background: transparent !important;
+  transition: background 0.3s ease;
+}
+
 
 .footer.light .NavLinks,
 .NavLinks {

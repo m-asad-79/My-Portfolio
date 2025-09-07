@@ -12,7 +12,12 @@ const AboutSection = () => {
       <div className="about-container">
         
         {/* 👇 Heading */}
-        <h1 className="about-title">About Me</h1>
+       <h2 className="section-title">
+  My <span>About</span>
+</h2>
+<p className="section-subtitle">
+  ✨ Turning ideas into reality with design & code ✨
+</p>
 
         {/* 👇 Intro with Image */}
         <div className="about-intro-section">
