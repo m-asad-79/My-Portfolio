@@ -6,7 +6,23 @@
 /* Nav.Link  */
 .NavLinks {
   transition: color 0.3s;
-  margin-left: 10px;
+  margin-left: 15px;
+  font-size: 1.1rem;   /* 👈 thoda bada text */
+  font-weight: 500;
+}
+
+.NavLinks:hover {
+  text-decoration: underline;
+}
+
+/* Light theme hover */
+.navbar-light .NavLinks:hover {
+  color: #6c63ff !important;
+}
+
+/* Dark theme hover */
+.navbar-dark .NavLinks:hover {
+  color: #ff4b5c !important;
 }
 
 /* Developer & Designer center text */
@@ -28,67 +44,12 @@
   --developer-text-color: #fff;
 }
 
-
-/* Nav.Link text size increased */
-.NavLinks {
-  transition: color 0.3s;
-  margin-left: 15px;
-  font-size: 1.1rem;   /* 👈 thoda bada text */
-  font-weight: 500;
-}
-
-.NavLinks:hover {
-  text-decoration: underline;
-}
-
-/* Light theme hover */
-.navbar-light .NavLinks:hover {
-  color: #6c63ff !important;
-}
-
-/* Dark theme hover */
-.navbar-dark .NavLinks:hover {
-  color: #ff4b5c !important;
-}
-
 /* togglebtn */
 #togglebtn {
   margin-right: -70px;
   margin-top: -5px;
   margin-left: auto;
-}
-
-/* Transparent Navbar */
-.navbar {
-  background: transparent !important;
-  transition: background 0.3s ease;
-}
-
-
-.footer.light .NavLinks,
-.NavLinks {
-  color: inherit;
-}
-
-.NavLinks:hover {
-  text-decoration: underline;
-}
-
-/* Light theme hover */
-.navbar-light .NavLinks:hover {
-  color: #6c63ff !important;
-}
-
-/* Dark theme hover */
-.navbar-dark .NavLinks:hover {
-  color: #ff4b5c !important;
-}
-
-/* togglebtn */
-#togglebtn {
-  margin-right: -70px;
-  margin-top: -5px;
-  margin-left: auto;
+  cursor: pointer;
 }
 
 /* loginbtn */
@@ -113,4 +74,65 @@
 .navbar {
   background: transparent !important;
   transition: background 0.3s ease;
+}
+
+/* Footer NavLinks */
+.footer.light .NavLinks,
+.NavLinks {
+  color: inherit;
+}
+
+/* ========================= */
+/* 📱 Mobile Responsiveness */
+/* ========================= */
+@media (max-width: 768px) {
+  /* Navbar collapse items center */
+  .navbar-collapse {
+    text-align: center;
+  }
+
+  .NavLinks {
+    margin-left: 0;
+    display: block;
+    padding: 10px 0;
+    font-size: 1rem;
+  }
+
+  #home {
+    margin-left: 0;
+  }
+
+  .developer-text {
+    font-size: 1rem;
+    margin: 10px auto;
+    display: block;
+  }
+
+  #togglebtn {
+    margin: 10px auto 0 auto;
+    text-align: center;
+    font-size: 1.8rem;
+  }
+
+  #loginbtn {
+    margin: 15px auto;
+    display: block;
+  }
+}
+
+/* ========================= */
+/* 🖥️ Tablet Responsiveness */
+/* ========================= */
+@media (max-width: 1024px) {
+  .developer-text {
+    font-size: 1.1rem;
+  }
+
+  #loginbtn {
+    margin-left: 0;
+  }
+
+  #togglebtn {
+    margin-right: 0;
+  }
 }

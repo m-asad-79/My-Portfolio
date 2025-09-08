@@ -189,8 +189,6 @@
   margin-top: 0.5rem;
 }
 
-
-
 /* Stats Row */
 .stats-row {
   display: flex;
@@ -207,6 +205,8 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s, color 0.3s;
   cursor: pointer;
   font-weight: 500;
+  min-width: 200px;
+  flex: 1 1 220px;
 }
 
 /* Numbers */
@@ -215,8 +215,6 @@
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
-
-
 .stat-box p {
   font-size: 0.95rem;
   opacity: 0.85;
@@ -244,4 +242,50 @@
   color: #fff;
   transform: translateY(-6px) scale(1.05);
   box-shadow: 0 10px 25px rgba(255, 75, 92, 0.4);
+}
+
+/* ========================= */
+/* 📱 Extra Responsiveness */
+/* ========================= */
+@media (max-width: 768px) {
+  .projects-header .section-title {
+    font-size: 2.2rem;
+  }
+  .projects-header .section-subtitle {
+    font-size: 1rem;
+  }
+  .project-info h3 {
+    font-size: 1.2rem;
+  }
+  .project-info p {
+    font-size: 0.9rem;
+  }
+  .stat-box h3 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-section {
+    padding: 3rem 1rem;
+  }
+  .projects-header .section-title {
+    font-size: 1.8rem;
+  }
+  .projects-header .section-subtitle {
+    font-size: 0.9rem;
+  }
+  .project-info h3 {
+    font-size: 1rem;
+  }
+  .project-info p {
+    font-size: 0.85rem;
+  }
+  .stat-box {
+    padding: 1rem;
+    min-width: 160px;
+  }
+  .stat-box h3 {
+    font-size: 1.4rem;
+  }
 }

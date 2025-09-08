@@ -192,3 +192,81 @@
   margin-bottom: 3rem;
 }
 
+/* ✅ Responsive Design */
+
+/* Tablet screens (max-width: 992px) */
+@media (max-width: 992px) {
+  .about-page {
+    padding: 40px 5%;
+  }
+
+  .about-profile-pic {
+    width: 200px;
+    height: 200px;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .section-heading {
+    font-size: 1.6rem;
+  }
+}
+
+/* Mobile screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .about-intro-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-intro {
+    font-size: 1rem;
+  }
+
+  .skills-section {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .progress-bars {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .fun-facts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* Small mobile screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .about-page {
+    padding: 30px 5%;
+  }
+
+  .about-profile-pic {
+    width: 150px;
+    height: 150px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-heading {
+    font-size: 1.4rem;
+  }
+
+  .about-intro {
+    font-size: 0.95rem;
+  }
+
+  .skill-icon,
+  .fact-icon {
+    font-size: 2rem;
+  }
+}
