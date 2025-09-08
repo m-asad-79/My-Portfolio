@@ -11,11 +11,23 @@
 
 /* Developer & Designer center text */
 .developer-text {
-  font-size: 1.2rem;   /* base size */
+  font-size: 1.2rem;
   letter-spacing: 1px;
   text-align: center;
-  color: white;
+  color: var(--developer-text-color);
+  transition: color 0.3s;
 }
+
+/* Light theme */
+.light-theme {
+  --developer-text-color: #333;
+}
+
+/* Dark theme */
+.dark-theme {
+  --developer-text-color: #fff;
+}
+
 
 /* Nav.Link text size increased */
 .NavLinks {

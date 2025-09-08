@@ -28,9 +28,18 @@ const NavBar = () => {
     </Navbar.Brand>
 
     {/* 👇 Center Text */}
-    <div className="mx-auto fw-bold developer-text">
-      Developer & Designer
-    </div>
+    <div
+  className="mx-auto fw-bold developer-text"
+  style={{
+    fontSize: "1.2rem",
+    letterSpacing: "1px",
+    textAlign: "center",
+    color: theme === "light" ? "#333" : "#fff", // 👈 theme ke hisaab se color
+    transition: "color 0.3s",
+  }}
+>
+  Developer & Designer
+</div>
 
     <Navbar.Toggle aria-controls="navbar-nav" />
     <Navbar.Collapse id="navbar-nav">
