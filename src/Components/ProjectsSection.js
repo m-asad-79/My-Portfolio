@@ -63,14 +63,6 @@ const ProjectsSection = () => {
 
             <div className="project-img">
               <img src={project.img} alt={project.title} />
-              <div className="overlay">
-                <a href={project.live} target="_blank" rel="noreferrer">
-                  <FaExternalLinkAlt /> Live
-                </a>
-                <a href={project.code} target="_blank" rel="noreferrer">
-                  <FaGithub /> Code
-                </a>
-              </div>
             </div>
 
             <div className="project-info">
@@ -82,15 +74,24 @@ const ProjectsSection = () => {
                   <span key={i}>{t}</span>
                 ))}
               </div>
+
+              {/* ✅ Buttons moved here */}
+              <div className="project-links">
+                <a href={project.live} target="_blank" rel="noreferrer" className="btn-link">
+                  <FaExternalLinkAlt /> Live
+                </a>
+                <a href={project.code} target="_blank" rel="noreferrer" className="btn-link">
+                  <FaGithub /> Code
+                </a>
+              </div>
             </div>
           </div>
         ))}
       </div>
 
-      {/* Stats Row inside Projects Section */}
+      {/* Stats Row */}
       <div className="stats-row">
-         
-        <div className="stat-box">  
+        <div className="stat-box">
           <h3>100+</h3>
           <p>Projects Completed</p>
         </div>

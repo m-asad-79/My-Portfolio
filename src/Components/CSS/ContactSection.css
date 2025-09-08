@@ -118,14 +118,15 @@
 .contact-info .info-item {
   display: flex;
   align-items: center;
-  margin-left: 20%;
-  margin-bottom: 1.5rem;
+  margin: 0 auto 1.5rem;   /* ✅ auto left-right, niche ka spacing same */
   padding: 0.6rem 0.8rem;
   border-radius: 10px;
   transition: all 0.3s ease;
   cursor: pointer;
   max-width: 330px;
 }
+
+
 #email {
   margin-top: 5%;
 }
@@ -211,4 +212,34 @@
     font-size: 0.9rem;
     padding: 0.8rem 1rem;
   }
+}
+
+/* Social Links */
+.social-links {
+  text-align: center;
+  margin-top: 2rem;
+}
+.social-links h4 {
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.social-icons a {
+  font-size: 1.4rem;
+  padding: 10px;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+.contact-section.light .social-icons a {
+  color: #6c63ff;
+}
+.contact-section.dark .social-icons a {
+  color: #ff4b5c;
+}
+.social-icons a:hover {
+  transform: scale(1.2);
 }

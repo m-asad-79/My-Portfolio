@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { useTheme } from "../Components/ThemeContext";
-import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
+import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaFacebookF, FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 import emailjs from "emailjs-com";
 import "./CSS/ContactSection.css";
 
@@ -14,10 +14,10 @@ const ContactSection = () => {
 
     emailjs
       .sendForm(
-        "service_a0rtxji",   // ← EmailJS se copy karo
-        "template_vekufsn",  // ← EmailJS se copy karo
+        "service_a0rtxji",
+        "template_vekufsn",
         formRef.current,
-        "SykivTWmGNUNPo2gM"    // ← EmailJS user/public key
+        "SykivTWmGNUNPo2gM"
       )
       .then(
         (result) => {
@@ -46,13 +46,6 @@ const ContactSection = () => {
       <div className="contact-container">
         {/* Left Side - Info */}
         <div className="contact-info">
-          <div id="email" className="info-item">
-            <FaEnvelope className="icon" />
-            <div>
-              <h4>Email</h4>
-              <p>asadullah7959@gmail.com</p>
-            </div>
-          </div>
           <div className="info-item">
             <FaPhoneAlt className="icon" />
             <div>
@@ -60,11 +53,31 @@ const ContactSection = () => {
               <p>+92 322 9876560</p>
             </div>
           </div>
+
           <div className="info-item">
             <FaMapMarkerAlt className="icon" />
             <div>
               <h4>Location</h4>
               <p>Lahore, Pakistan</p>
+            </div>
+          </div>
+
+          <div className="info-item">
+            <FaEnvelope className="icon" />
+            <div>
+              <h4>Email</h4>
+              <p>asadullah7959@gmail.com</p>
+            </div>
+          </div>
+
+          {/* Social Media */}
+          <div className="social-links">
+            <h4>Find me on</h4>
+            <div className="social-icons">
+              <a href="https://www.facebook.com/CHASAD005/" target="_blank" rel="noreferrer"><FaFacebookF /></a>
+              <a href="https://www.instagram.com/m_asad_79/?hl=en" target="_blank" rel="noreferrer"><FaInstagram /></a>
+              <a href="https://www.linkedin.com/in/m-asad-ullah-bb8aa931b/" target="_blank" rel="noreferrer"><FaLinkedin /></a>
+              <a href="https://github.com/m-asad-79" target="_blank" rel="noreferrer"><FaGithub /></a>
             </div>
           </div>
         </div>
