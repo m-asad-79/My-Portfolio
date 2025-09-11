@@ -215,31 +215,41 @@
 }
 
 /* Social Links */
-.social-links {
+.social-media-links {
   text-align: center;
   margin-top: 2rem;
 }
 .social-links h4 {
   margin-bottom: 0.8rem;
   font-size: 1.2rem;
+
 }
-.social-icons {
+
+#icons-heading{
+  margin-left: -15%;
+}
+
+.social-media-icons {
   display: flex;
   justify-content: center;
   gap: 1rem;
 }
-.social-icons a {
+.social-media-icons a {
   font-size: 1.4rem;
   padding: 10px;
   border-radius: 50%;
   transition: all 0.3s;
 }
-.contact-section.light .social-icons a {
+.contact-section.light .social-media-icons a {
   color: #6c63ff;
 }
-.contact-section.dark .social-icons a {
+.contact-section.dark .social-media-icons a {
   color: #ff4b5c;
 }
-.social-icons a:hover {
+.social-media-icons a:hover {
   transform: scale(1.2);
+}
+
+#social-icons{
+  margin-left: -18%;
 }

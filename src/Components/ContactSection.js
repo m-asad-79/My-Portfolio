@@ -71,10 +71,10 @@ const ContactSection = () => {
           </div>
 
           {/* Social Media */}
-          <div className="social-links">
-            <h4>Find me on</h4>
-            <div className="social-icons">
-              <a href="https://www.facebook.com/CHASAD005/" target="_blank" rel="noreferrer"><FaFacebookF /></a>
+          <div className="social-media-links">
+            <h4 id="icons-heading">Find me on</h4>
+            <div className="social-media-icons">
+              <a href="https://www.facebook.com/CHASAD005/" target="_blank" id="social-icons" rel="noreferrer"><FaFacebookF /></a>
               <a href="https://www.instagram.com/m_asad_79/?hl=en" target="_blank" rel="noreferrer"><FaInstagram /></a>
               <a href="https://www.linkedin.com/in/m-asad-ullah-bb8aa931b/" target="_blank" rel="noreferrer"><FaLinkedin /></a>
               <a href="https://github.com/m-asad-79" target="_blank" rel="noreferrer"><FaGithub /></a>
